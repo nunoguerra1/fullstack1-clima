@@ -1,10 +1,16 @@
-import './App.css'
+import { WeatherProvider } from './contexts/WeatherContext';
+import { SearchBar } from './components/SearchBar';
+import { WeatherCard } from './components/WeatherCard';
 
 function App() {
-
   return (
-    <div></div>
-  )
+    <WeatherProvider>
+      <main className="w-full min-h-screen pb-20">
+        <SearchBar />
+        <WeatherCard />
+      </main>
+    </WeatherProvider>
+  );
 }
 
-export default App
+export default App;
